@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Brújula Mágica - Videojuego Educativo</title>
+  <meta name="description" content="Acompañá a Calo en una aventura por Paraguay y ayudá a distintas comunidades a recuperar su equilibrio en La Brújula Mágica.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="#" class="logo-link">
+        <img src="assets/logo.png" alt="La Brújula Mágica Logo" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <a href="#" class="nav-link active">Inicio</a>
+        <a href="#historia" class="nav-link">Historia</a>
+        <a href="#personajes" class="nav-link">Personajes</a>
+        <a href="#niveles" class="nav-link">Niveles</a>
+        <a href="#proyecto" class="nav-link">El Proyecto</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero-section">
+    <!-- CSS Background Shapes (organic blobs & golden glows) -->
+    <div class="bg-shape bg-glow-gold"></div>
+    <div class="bg-shape bg-organic-blob-1"></div>
+    <div class="bg-shape bg-organic-blob-2"></div>
+    
+    <!-- Floating CSS Leaves (Nature details) -->
+    <div class="leaf leaf-1">🍃</div>
+    <div class="leaf leaf-2">🍂</div>
+    <div class="leaf leaf-3">🍃</div>
+    <div class="leaf leaf-4">🍁</div>
+
+    <div class="container hero-container">
+      <div class="hero-grid">
+        <!-- Left Column: Content -->
+        <div class="hero-content">
+          <div class="badge">Aventura Educativa</div>
+          <h1 class="hero-title">La Brújula Mágica</h1>
+          <p class="hero-tagline">La brújula marca el camino. Vos decidís cambiarlo.</p>
+          <p class="hero-description">
+            Acompañá a Calo en una aventura por Paraguay y ayudá a distintas comunidades a recuperar su equilibrio.
+          </p>
+          <div class="hero-actions">
+            <a href="#historia" id="btn-explore" class="btn btn-primary">
+              Explorar la aventura
+              <span class="btn-icon">→</span>
+            </a>
+            <a href="#proyecto" id="btn-about" class="btn btn-secondary">Conocer el proyecto</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual (Glowing Compass) -->
+        <div class="hero-visual">
+          <div class="visual-wrapper">
+            <!-- Golden Glow Aura behind compass -->
+            <div class="magic-compass-glow"></div>
+            
+            <!-- Magic Compass Image -->
+            <img src="assets/brujula.png" alt="Brújula Mágica" class="magic-compass-img">
+
+            <!-- Magical particles floating around -->
+            <div class="particle particle-1">✨</div>
+            <div class="particle particle-2">✨</div>
+            <div class="particle particle-3">✨</div>
+            <div class="particle particle-4">✨</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Storyboard Section -->
+  <section id="historia" class="storyboard-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-badge">El Recorrido</span>
+        <h2 class="section-title">Una brújula. Tres misiones. Un mismo propósito.</h2>
+        <p class="section-desc">Descubrí el recorrido de Calo a través de distintos lugares del Paraguay.</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="storyboard-timeline">
+        <!-- Connecting Golden Line -->
+        <div class="timeline-line"></div>
+
+        <!-- Stage 1 -->
+        <div class="timeline-item scroll-reveal stage-1">
+          <div class="timeline-number">01</div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <span class="timeline-stage-tag">El Despertar de la Brújula</span>
+              <h3 class="timeline-title">El llamado</h3>
+              <p class="timeline-description">
+                Durante una noche en el campamento scout, la brújula de Calo comienza a girar sin control. Esteban, el Jefe Scout, comprende que no está señalando el norte: está buscando un lugar donde el equilibrio se ha perdido.
+              </p>
+              <div class="timeline-slogan">
+                “Esta brújula no busca el norte. Busca el equilibrio.”
+              </div>
+              <div class="timeline-image-wrapper">
+                <img src="assets/historia-01-llamado.png" alt="El llamado de la brújula junto a Esteban, el Jefe Scout" class="timeline-img">
+              </div>
+            </div>
+          </div>
+          <div class="timeline-visual-empty"></div>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="timeline-item scroll-reveal stage-2">
+          <div class="timeline-visual-empty"></div>
+          <div class="timeline-number">02</div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <span class="timeline-stage-tag badge-education">ODS 4 — Educación de calidad</span>
+              <h3 class="timeline-title">La Escuela de los Sueños</h3>
+              <p class="timeline-description">
+                La brújula lleva a Calo hasta la escuela rural de Yerutí. Para ayudar a reconstruirla, debe recuperar los tres fragmentos de la llave, conducir la camioneta y transportar los materiales.
+              </p>
+              <div class="timeline-result">
+                <strong>Resultado:</strong> Una escuela digna vuelve a abrir sus puertas.
+              </div>
+              <div class="timeline-image-wrapper">
+                <img src="assets/historia-02-educacion.png" alt="Calo y Yerutí reconstruyendo la escuela rural" class="timeline-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="timeline-item scroll-reveal stage-3">
+          <div class="timeline-number">03</div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <span class="timeline-stage-tag badge-electricity">ODS 7 — Energía asequible y no contaminante</span>
+              <h3 class="timeline-title">Electricidad fuera de control</h3>
+              <p class="timeline-description">
+                Calo conoce a Santi y descubre una instalación de energía que necesita ser reparada. Debe encontrar las tuercas necesarias y ayudar a recuperar el funcionamiento seguro del sistema.
+              </p>
+              <div class="timeline-result">
+                <strong>Resultado:</strong> La energía vuelve a estar disponible de manera segura y responsable.
+              </div>
+              <div class="timeline-image-wrapper">
+                <img src="assets/historia-03-electricidad.png" alt="Calo y Santi reparando el sistema eléctrico" class="timeline-img">
+              </div>
+            </div>
+          </div>
+          <div class="timeline-visual-empty"></div>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="timeline-item scroll-reveal stage-4">
+          <div class="timeline-visual-empty"></div>
+          <div class="timeline-number">04</div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <span class="timeline-stage-tag badge-chaco">ODS 13 — Acción por el clima</span>
+              <h3 class="timeline-title">El Respiro del Chaco</h3>
+              <p class="timeline-description">
+                En el Chaco paraguayo, Calo encuentra a Don Esteban enfrentando los incendios provocados por la sequía. El jugador debe administrar el agua, recargar su equipo y apagar todos los focos antes de que se termine el tiempo.
+              </p>
+              <div class="timeline-result">
+                <strong>Resultado:</strong> El monte queda protegido y la comunidad recupera la esperanza.
+              </div>
+              <div class="timeline-image-wrapper">
+                <img src="assets/historia-04-chaco.png" alt="Calo y Don Esteban protegiendo el Chaco de los incendios" class="timeline-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 5 -->
+        <div class="timeline-item scroll-reveal stage-5">
+          <div class="timeline-number">05</div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <span class="timeline-stage-tag">El Aprendizaje</span>
+              <h3 class="timeline-title">El verdadero poder</h3>
+              <p class="timeline-description">
+                Después de completar las tres misiones, Calo comprende que la brújula no resuelve los problemas. Solamente muestra dónde hace falta actuar.
+              </p>
+              <div class="timeline-slogan">
+                “La brújula puede mostrar el camino, pero el cambio comienza cuando decidimos ayudar.”
+              </div>
+              <div class="timeline-image-wrapper">
+                <img src="assets/historia-05-aprendizaje.png" alt="Calo comprende el verdadero poder de la brújula" class="timeline-img">
+              </div>
+            </div>
+          </div>
+          <div class="timeline-visual-empty"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Characters Section -->
+  <section id="personajes" class="characters-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-badge">El Elenco</span>
+        <h2 class="section-title">Conocé a los personajes</h2>
+        <div class="section-divider"></div>
+      </div>
+      
+      <div class="characters-grid">
+        <!-- Card 1: Calo -->
+        <div class="character-card">
+          <div class="card-image-wrapper">
+            <img src="assets/calo.png" alt="Calo" class="card-img">
+          </div>
+          <div class="card-content">
+            <span class="card-role">Protagonista</span>
+            <h3 class="card-name">Calo</h3>
+            <p class="card-description">
+              Un joven castor scout curioso, valiente y siempre dispuesto a ayudar. La brújula mágica lo guía hacia lugares donde su esfuerzo puede marcar la diferencia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Esteban -->
+        <div class="character-card">
+          <div class="card-image-wrapper">
+            <img src="assets/esteban-jefe.png" alt="Esteban" class="card-img">
+          </div>
+          <div class="card-content">
+            <span class="card-role">Jefe Scout</span>
+            <h3 class="card-name">Esteban</h3>
+            <p class="card-description">
+              El guía de Calo y quien comprende el verdadero poder de la brújula. Representa la experiencia, la orientación y los valores del movimiento scout.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Yerutí -->
+        <div class="character-card">
+          <div class="card-image-wrapper">
+            <img src="assets/yeruti.png" alt="Yerutí" class="card-img">
+          </div>
+          <div class="card-content">
+            <span class="card-role">La Maestra</span>
+            <h3 class="card-name">Yerutí</h3>
+            <p class="card-description">
+              Maestra de una escuela rural que lucha para que sus alumnos puedan volver a estudiar en un lugar digno. Representa la educación, la perseverancia y el compromiso con su comunidad.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Santi -->
+        <div class="character-card">
+          <div class="card-image-wrapper">
+            <img src="assets/santi.png" alt="Santi" class="card-img">
+          </div>
+          <div class="card-content">
+            <span class="card-role">Encargado del Sistema Eléctrico</span>
+            <h3 class="card-name">Santi</h3>
+            <p class="card-description">
+              Santi es el guardián del nivel de energía. Conoce el sistema eléctrico de la comunidad y guía a Calo en la búsqueda de las tuercas y piezas necesarias para repararlo de forma segura.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5: Don Esteban -->
+        <div class="character-card">
+          <div class="card-image-wrapper">
+            <img src="assets/don-esteban.png" alt="Don Esteban" class="card-img">
+          </div>
+          <div class="card-content">
+            <span class="card-role">Habitante del Chaco</span>
+            <h3 class="card-name">Don Esteban</h3>
+            <p class="card-description">
+              Un hombre de campo que enfrenta los incendios provocados por la sequía. Representa la resistencia de las comunidades del Chaco y el cuidado del ambiente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Levels Section -->
+  <section id="niveles" class="levels-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-badge">Niveles de Juego</span>
+        <h2 class="section-title">Una Aventura con Propósito</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Level 1: La Escuela de los Sueños -->
+      <div class="level-block level-education">
+        <div class="level-content">
+          <div class="level-ods">ODS 4 — Educación de calidad</div>
+          <h3 class="level-name">La Escuela de los Sueños</h3>
+          <div class="level-problematic">
+            “Cuando una escuela no cuenta con infraestructura ni materiales adecuados, no solo se deteriora un edificio: también se reducen las oportunidades de toda una comunidad.”
+          </div>
+          <div class="level-details">
+            <p class="level-mission">
+              <strong>Misión:</strong> Ayudá a Yerutí a recuperar la escuela rural. Encontrá los tres fragmentos de la llave, habilitá la camioneta y transportá los materiales necesarios hasta la zona de construcción.
+            </p>
+            <div class="level-mechanics">
+              <span class="mechanics-label">Mecánica:</span>
+              <div class="mechanics-tags">
+                <span class="mechanic-tag">Exploración</span>
+                <span class="mechanic-tag">Recolección</span>
+                <span class="mechanic-tag">Conducción</span>
+                <span class="mechanic-tag">Transporte</span>
+              </div>
+            </div>
+            <div class="level-impact-box">
+              <span class="impact-icon">leaf-icon</span>
+              <p class="level-impact-text">
+                Cada entrega acerca a los estudiantes a un espacio digno, seguro y preparado para aprender.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="level-image-container">
+          <img src="assets/nivel-educacion.png" alt="Nivel 1: La Escuela de los Sueños" class="level-img">
+        </div>
+      </div>
+
+      <!-- Level 2: Electricidad fuera de control -->
+      <div class="level-block level-electricity">
+        <div class="level-image-container">
+          <img src="assets/nivel-electricidad.png" alt="Nivel 2: Electricidad fuera de control" class="level-img">
+        </div>
+        <div class="level-content">
+          <div class="level-ods">ODS 7 — Energía asequible y no contaminante</div>
+          <h3 class="level-name">Electricidad fuera de control</h3>
+          <div class="level-problematic">
+            “Una instalación eléctrica dañada puede dejar a una comunidad sin energía y convertir un recurso esencial en un peligro.”
+          </div>
+          <div class="level-details">
+            <p class="level-mission">
+              <strong>Misión:</strong> Acompañá a Santi a reparar el sistema. Encontrá las tuercas necesarias y ayudá a restaurar la instalación de energía.
+            </p>
+            <div class="level-mechanics">
+              <span class="mechanics-label">Mecánica:</span>
+              <div class="mechanics-tags">
+                <span class="mechanic-tag">Búsqueda de piezas</span>
+                <span class="mechanic-tag">Reparación</span>
+                <span class="mechanic-tag">Misión contra reloj</span>
+              </div>
+            </div>
+            <div class="level-impact-box">
+              <span class="impact-icon">lightning-icon</span>
+              <p class="level-impact-text">
+                Al reparar el sistema, Calo ayuda a recuperar una energía más segura, estable y responsable para la comunidad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 3: El Respiro del Chaco -->
+      <div class="level-block level-chaco">
+        <div class="level-content">
+          <div class="level-ods">ODS 13 — Acción por el clima</div>
+          <h3 class="level-name">El Respiro del Chaco</h3>
+          <div class="level-problematic">
+            “La sequía extrema convierte el monte en un territorio vulnerable, donde un pequeño foco puede transformarse rápidamente en un incendio devastador.”
+          </div>
+          <div class="level-details">
+            <p class="level-mission">
+              <strong>Misión:</strong> Ayudá a Don Esteban a controlar los incendios. Administrá el agua de tu equipo, apagá los focos y regresá a recargar cuando sea necesario.
+            </p>
+            <div class="level-mechanics">
+              <span class="mechanics-label">Mecánica:</span>
+              <div class="mechanics-tags">
+                <span class="mechanic-tag">Extinción de incendios</span>
+                <span class="mechanic-tag">Gestión de agua</span>
+                <span class="mechanic-tag">Límite de tiempo</span>
+              </div>
+            </div>
+            <div class="level-impact-box">
+              <span class="impact-icon">fire-icon</span>
+              <p class="level-impact-text">
+                Cada foco apagado protege la vegetación, la fauna y a las comunidades que dependen del Chaco.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="level-image-container">
+          <img src="assets/nivel-chaco.png" alt="Nivel 3: El Respiro del Chaco" class="level-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- El Proyecto Section -->
+  <section id="proyecto" class="project-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-badge">Detrás de la aventura</span>
+        <h2 class="section-title">Un videojuego creado para aprender haciendo</h2>
+        <p class="section-desc">
+          La Brújula Mágica es un videojuego educativo ambientado en Paraguay que transforma problemáticas reales en misiones donde el jugador debe explorar, tomar decisiones y ayudar a distintas comunidades.
+        </p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="project-grid">
+        <!-- Card 1: Aprender Jugando -->
+        <div class="project-card">
+          <div class="project-card-icon">🎮</div>
+          <h3 class="project-card-title">Aprender jugando</h3>
+          <p class="project-card-text">
+            Cada nivel convierte un Objetivo de Desarrollo Sostenible en una experiencia interactiva, haciendo que el jugador participe directamente en la solución del problema.
+          </p>
+        </div>
+
+        <!-- Card 2: Identidad Paraguaya -->
+        <div class="project-card">
+          <div class="project-card-icon">🌿</div>
+          <h3 class="project-card-title">Identidad paraguaya</h3>
+          <p class="project-card-text">
+            Los paisajes, personajes y situaciones están inspirados en Paraguay, incorporando elementos de nuestra cultura y expresiones en guaraní dentro de la aventura.
+          </p>
+        </div>
+
+        <!-- Card 3: Una Aventura con Propósito -->
+        <div class="project-card">
+          <div class="project-card-icon">
+            <div class="ods-badge-container">
+              <span class="ods-mini-badge badge-4">4</span>
+              <span class="ods-mini-badge badge-7">7</span>
+              <span class="ods-mini-badge badge-13">13</span>
+            </div>
+          </div>
+          <h3 class="project-card-title">Una aventura con propósito</h3>
+          <p class="project-card-text">
+            El juego aborda la educación de calidad, el uso responsable de la energía y la acción por el clima a través de tres misiones inspiradas en los ODS 4, 7 y 13.
+          </p>
+        </div>
+      </div>
+
+      <!-- closure highlight box -->
+      <div class="project-highlight-box">
+        <span class="highlight-sparkle">✨</span>
+        <p class="highlight-text">
+          “La brújula puede mostrar el camino, pero el cambio comienza cuando decidimos ayudar.”
+        </p>
+        <span class="highlight-compass">🧭</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto Section -->
+  <section id="contacto" class="contact-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-badge">Detrás del juego</span>
+        <h2 class="section-title">Conocé al equipo</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="team-grid">
+        <!-- Team Member 1: David Ramirez -->
+        <div class="team-card">
+          <div class="team-photo-wrapper">
+            <img src="assets/david.png" alt="David Ramirez" class="team-img">
+          </div>
+          <h3 class="team-name">David Ramirez</h3>
+        </div>
+
+        <!-- Team Member 2: Veronica Leiva -->
+        <div class="team-card">
+          <div class="team-photo-wrapper">
+            <img src="assets/veronica.png" alt="Veronica Leiva" class="team-img">
+          </div>
+          <h3 class="team-name">Veronica Leiva</h3>
+        </div>
+
+        <!-- Team Member 3: Eduardo Fleitas -->
+        <div class="team-card">
+          <div class="team-photo-wrapper">
+            <img src="assets/eduardo.jpeg" alt="Eduardo Fleitas" class="team-img">
+          </div>
+          <h3 class="team-name">Eduardo Fleitas</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-logo-area">
+        <img src="assets/logo.png" alt="La Brújula Mágica Logo" class="footer-logo">
+        <span class="footer-title">La Brújula Mágica</span>
+      </div>
+      <p class="footer-tagline">Videojuego educativo desarrollado en Paraguay.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">© 2026 La Brújula Mágica</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

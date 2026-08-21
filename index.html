@@ -18,11 +18,16 @@
   <!-- Header -->
   <header class="main-header">
     <div class="container header-container">
-      <a href="#" class="logo-link">
+      <a href="#inicio" class="logo-link" aria-label="Ir al inicio">
         <img src="assets/logo.png" alt="La Brújula Mágica Logo" class="logo-img">
       </a>
-      <nav class="main-nav">
-        <a href="#" class="nav-link active">Inicio</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-link active">Inicio</a>
         <a href="#historia" class="nav-link">Historia</a>
         <a href="#personajes" class="nav-link">Personajes</a>
         <a href="#niveles" class="nav-link">Niveles</a>
@@ -33,7 +38,7 @@
   </header>
 
   <!-- Hero Section -->
-  <main class="hero-section">
+  <main id="inicio" class="hero-section">
     <!-- CSS Background Shapes (organic blobs & golden glows) -->
     <div class="bg-shape bg-glow-gold"></div>
     <div class="bg-shape bg-organic-blob-1"></div>

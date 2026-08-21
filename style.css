@@ -481,14 +481,10 @@ a {
 
 /* Scroll Reveal animations */
 .scroll-reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.scroll-reveal.visible {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+              transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Characters Section */
@@ -1375,5 +1371,569 @@ a {
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem;
+  }
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE ENHANCEMENTS
+   Mantiene intacta la versión de escritorio.
+   ========================================================= */
+
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-sm);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 130;
+  transition: var(--transition-normal);
+}
+
+.menu-toggle:hover {
+  background: var(--color-white);
+}
+
+.menu-toggle-line {
+  width: 23px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--color-forest-green);
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+
+.menu-toggle.is-open .menu-toggle-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-open .menu-toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open .menu-toggle-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+section,
+main {
+  scroll-margin-top: 95px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .header-container {
+    height: 72px;
+    position: relative;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Sobrescribe la regla antigua que ocultaba el nav */
+  .main-nav {
+    display: flex;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 1.25rem;
+    right: 1.25rem;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.65rem;
+    border-radius: 20px;
+    background: rgba(255, 244, 216, 0.98);
+    border: 1px solid rgba(79, 125, 97, 0.14);
+    box-shadow: 0 18px 45px rgba(46, 58, 53, 0.16);
+    backdrop-filter: blur(14px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px) scale(0.98);
+    transform-origin: top right;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    z-index: 120;
+  }
+
+  .main-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+
+  .main-nav .nav-link {
+    width: 100%;
+    padding: 0.82rem 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  .main-nav .nav-link::after {
+    display: none;
+  }
+
+  .main-nav .nav-link:hover,
+  .main-nav .nav-link:focus-visible {
+    background: rgba(79, 125, 97, 0.09);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding-top: 92px;
+    padding-bottom: 55px;
+  }
+
+  .hero-grid {
+    gap: 1.4rem;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .visual-wrapper {
+    width: min(72vw, 285px);
+    max-width: 285px;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    gap: 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.35rem, 11vw, 3.25rem);
+  }
+
+  .hero-tagline {
+    font-size: clamp(1.15rem, 5vw, 1.5rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    max-width: 34rem;
+  }
+
+  .hero-actions {
+    gap: 0.8rem;
+  }
+
+  .btn {
+    width: min(100%, 340px);
+    min-height: 48px;
+    padding: 0.82rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .storyboard-section,
+  .characters-section,
+  .levels-section,
+  .project-section,
+  .contact-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.85rem, 8vw, 2.4rem);
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .storyboard-timeline {
+    margin-top: 2.4rem;
+    padding-top: 0.5rem;
+  }
+
+  .timeline-line {
+    left: 22px;
+  }
+
+  .timeline-item {
+    padding-left: 49px;
+    margin-bottom: 3rem;
+    gap: 0;
+  }
+
+  .timeline-number {
+    left: 22px;
+    top: 28px;
+    width: 44px;
+    height: 44px;
+    border-width: 3px;
+    font-size: 1rem;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+
+  .timeline-title {
+    font-size: 1.5rem;
+  }
+
+  .timeline-stage-tag {
+    font-size: 0.74rem;
+    letter-spacing: 0.05em;
+  }
+
+  .timeline-image-wrapper {
+    margin-top: 1.1rem;
+    border-radius: 13px;
+  }
+
+  .characters-grid,
+  .project-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .card-image-wrapper {
+    height: min(66vw, 270px);
+    min-height: 220px;
+    padding: 1rem;
+  }
+
+  .card-content {
+    padding: 1.35rem;
+  }
+
+  .card-name {
+    font-size: 1.55rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .level-block,
+  .level-block.level-electricity {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+    padding: 1.35rem;
+    margin-bottom: 2.5rem;
+    border-radius: 20px;
+  }
+
+  .level-image-container {
+    order: -1;
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+  }
+
+  .level-name {
+    font-size: clamp(1.65rem, 7vw, 2rem);
+  }
+
+  .level-ods {
+    font-size: 0.82rem;
+  }
+
+  .level-problematic {
+    padding: 0.95rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .level-mission {
+    font-size: 0.98rem;
+  }
+
+  .level-mechanics {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .mechanics-tags {
+    width: 100%;
+  }
+
+  .mechanic-tag {
+    padding: 0.38rem 0.72rem;
+    font-size: 0.8rem;
+  }
+
+  .level-impact-box {
+    padding: 0.95rem;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .level-impact-text {
+    font-size: 0.92rem;
+  }
+
+  .project-card {
+    padding: 1.6rem 1.25rem;
+  }
+
+  .project-card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-highlight-box {
+    margin-top: 2.5rem;
+    padding: 1.35rem;
+    border-left-width: 3px;
+    border-right-width: 3px;
+  }
+
+  .highlight-text {
+    font-size: 1.08rem;
+  }
+
+  .team-grid {
+    margin-top: 2.5rem;
+  }
+
+  .team-card {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .team-photo-wrapper {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .team-name {
+    font-size: 1.3rem;
+    margin: 1.15rem 0;
+  }
+
+  .main-footer {
+    padding: 2.2rem 0 1.6rem;
+  }
+
+  .footer-logo-area {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .footer-logo {
+    height: 42px;
+  }
+
+  .footer-title {
+    font-size: 1.35rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
+
+  .footer-divider {
+    margin: 0.65rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* La regla original ocultaba .main-nav; esta la mantiene disponible como menú */
+  .main-nav {
+    display: flex;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header-container {
+    height: 68px;
+  }
+
+  .logo-img {
+    height: 46px;
+    max-width: 190px;
+  }
+
+  .main-nav {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .hero-section {
+    padding-top: 84px;
+    padding-bottom: 46px;
+  }
+
+  .visual-wrapper {
+    width: min(68vw, 245px);
+    max-width: 245px;
+  }
+
+  .badge {
+    font-size: 0.72rem;
+    padding: 0.42rem 0.9rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.1rem, 12vw, 2.65rem);
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+  }
+
+  .hero-description {
+    font-size: 0.94rem;
+  }
+
+  .timeline-line {
+    left: 18px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-number {
+    left: 18px;
+    width: 38px;
+    height: 38px;
+    font-size: 0.88rem;
+  }
+
+  .timeline-card {
+    padding: 1rem;
+  }
+
+  .timeline-title {
+    font-size: 1.34rem;
+  }
+
+  .timeline-description,
+  .timeline-result,
+  .timeline-slogan {
+    font-size: 0.9rem;
+  }
+
+  .level-block,
+  .level-block.level-electricity {
+    padding: 1rem;
+  }
+
+  .level-impact-box {
+    flex-direction: row;
+  }
+
+  .impact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.15rem;
+  }
+
+  .project-card-title {
+    font-size: 1.28rem;
+  }
+
+  .project-card-text {
+    font-size: 0.93rem;
+  }
+
+  .highlight-sparkle,
+  .highlight-compass {
+    font-size: 1.4rem;
+  }
+
+  .team-card {
+    border-radius: 18px;
+  }
+
+  .team-photo-wrapper {
+    aspect-ratio: 1 / 1;
+    max-height: 360px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .logo-img {
+    height: 42px;
+    max-width: 165px;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .main-nav {
+    left: 0.85rem;
+    right: 0.85rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .timeline-stage-tag {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .mechanics-tags {
+    gap: 0.45rem;
+  }
+
+  .mechanic-tag {
+    font-size: 0.76rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
